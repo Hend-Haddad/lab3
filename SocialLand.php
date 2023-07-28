@@ -22,13 +22,17 @@ class SocialLand
 
     public function findByUsername(string $username)
     {
-        $name = 'null';
-        foreach ($users as $user) {
-            if ($username instanceof User) {
-                $name = $user;
-                break;
+        $user = 'null';
+        $nb = count($users);
+        $i = 0;
+        while ($i < $nb) {
+            if ($username != $users[$i])
+                $i++;
+            else {
+                $user = $username;
             }
-            return $name;
+
+            return $user;
         }
     }
 }
