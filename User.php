@@ -9,6 +9,7 @@ class  User
 
     public function post(string $content): Post
     {
+        $content = readline('write your post:');
         $post = new post($content);
         return $post;
     }

@@ -17,8 +17,8 @@ class Post
     }
     public function addComment(Comment $comment): void
     {
-        $comment1 = new Comment('$comment1');
-        echo $comment1;
+        $comment = new Comment('$comment');
+        echo $comment;
     }
     public function getComment(): array
     {
